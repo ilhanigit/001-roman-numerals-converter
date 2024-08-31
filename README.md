@@ -94,7 +94,7 @@ Ten         Warning with "Not Valid! Please enter a number between 1 and 3999, i
 
 ## Expected Outcome
 
-![Project 001 Snapshot](project-001-snapshot.png)
+![Project 001 Snapshot](project-snapshot.png)
 
 ### At the end of the project, following topics are to be covered;
 
