@@ -2,42 +2,61 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project - 001</title>
-    <style>
-        body {
-            width: 600px;
-            margin: auto;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roman Numerals Converter - Result</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff6f61, #ff3d58);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
 
-        h2 {
-            margin-top: 100px;
-            margin-bottom: 50px;
-            margin-right: auto;
-            margin-left: auto;
-        }
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
 
-        .result {
-            color: rgb(255, 38, 0);
-            font-size: x-large;
-        }
+    h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #fff;
+      text-transform: uppercase;
+    }
 
-        .footnote {
-            color: rgba(0, 0, 255, 0.712);
-        }
-    </style>
+    .result {
+      color: #ff3d58;
+      font-size: 36px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .footnote {
+      margin-top: 20px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  </style>
 </head>
 
 <body>
-    <h2>Project : Roman Numerals Converter Application</h2>
-    <br>
-    <h3><b>Result:</b></h3>
-    <p>Number <span class="result"> <b> {{ number_decimal }}</b> </span>equals to <span class="result"><b>{{ number_roman }}</b></span> in Roman Numerals</p><br><br>
+  <div class="container">
+    <h2>Roman Numerals Converter - Result</h2>
+    <p>Number <span class="result">{{ number_decimal }}</span> equals <span class="result">{{ number_roman }}</span> in Roman Numerals.</p>
 
-
-    <p class="footnote"><i>This app is developed in Python by Abraham and deployed with Flask on AWS
-            EC2 Instance using AWS Clouldformation Service.</i></p>
+    <p class="footnote"><i>This app is developed in Python by Abraham and deployed with Flask on AWS EC2 Instance using AWS CloudFormation Service.</i></p>
+  </div>
 </body>
 
 </html>
