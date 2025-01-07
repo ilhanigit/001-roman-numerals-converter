@@ -4,65 +4,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project - 001</title>
+  <title>Roman Numerals Converter</title>
   <style>
     body {
-      max-width: 600px;
-      margin: auto;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff6f61, #ff3d58);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
 
     h2 {
-      margin-top: 100px;
-      margin-bottom: 50px;
-      margin-right: auto;
-      margin-left: auto;
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #dcdcdc;
     }
 
     input {
-      box-sizing: border-box;
       width: 100%;
       padding: 15px;
-      margin: 20px 0;
-      display: inline-block;
-      border: none;
-      background: #f1f1f1;
+      font-size: 16px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      background: #fff;
+      color: #333;
+      transition: 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #ff3d58;
+      outline: none;
     }
 
     button {
-      box-sizing: border-box;
-      background-color: #4caf50;
-      color: white;
-      padding: 16px 20px;
-      margin: 8px 0;
-      border: none;
-      cursor: pointer;
       width: 100%;
-      opacity: 0.9;
+      padding: 15px;
+      font-size: 16px;
+      background-color: #ff3d58;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e02d49;
     }
 
     .warning {
-      color: red;
+      color: yellow;
+      margin-top: 10px;
     }
 
-    .footnote{
-      color: rgba(0, 0, 255, 0.712);
+    .footnote {
+      margin-top: 20px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
     }
-
   </style>
 </head>
 
 <body>
-  <h2>Project : Roman Numerals Converter Application</h2>
-  <p>This application converts decimal numbers to Roman numerals. Only numbers from 1 to 3999 are allowed.</p><br>
-  <form action="/" method="post">
-    <label for="number"><b>Please enter a number:</b></label>
-    <input placeholder="50" name="number" id="number" required />
-    <button type="submit">Submit</button>
-    {% if not_valid %}
-    <p class="warning"><b>Not Valid! Please enter a number between 1 and 3999, inclusively.</b></p>
-    {% endif %}
-  </form>
+  <div class="container">
+    <h2>Roman Numerals Converter</h2>
+    <p>Convert decimal numbers to Roman numerals (between 1 and 3999).</p>
 
-  <p class="footnote"><i>This app is developed in Python by Abraham and deployed with Flask on AWS EC2 Instance using AWS Clouldformation Service.</i></p>
+    <form action="/" method="post">
+      <label for="number"><b>Please enter a number:</b></label>
+      <input type="number" name="number" id="number" placeholder="Enter a number" required />
+      <button type="submit">Convert</button>
+
+      {% if not_valid %}
+      <p class="warning"><b>Not Valid! Please enter a number between 1 and 3999, inclusively.</b></p>
+      {% endif %}
+    </form>
+
+    <p class="footnote"><i>This app is developed in Python by Abraham and deployed with Flask on AWS EC2 Instance using AWS CloudFormation Service.</i></p>
+  </div>
 </body>
+
 </html>
